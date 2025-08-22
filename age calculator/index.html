@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <main>
+        <nav>
+            <div id="leftNav">
+                <img src="https://imgs.search.brave.com/Ggo3vHdcLHrROKFZOErvyq18fFGjvfPnaHsxYJ_Kl90/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/bG9nb2FpLmNvbS9v/c3MvaWNvbnMvMjAy/MS8xMi8wMi9Fb0xK/ZVloVDZZUGZkMjYu/cG5n" alt="">
+                <h2>AgeCally</h2>
+            </div>
+            <div id="midNav">
+                <h4>Home</h4>
+                <h4>About</h4>
+                <h4>Services</h4>
+                <h4>Contact</h4>
+            </div>
+            <div id="rightNav">
+                <button>Get Started</button>
+            </div>
+            <div id="menu">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+        <div id="container">
+            <div id="content">
+                <h1>Age Calculator</h1>
+                <h4>Date of birth</h4>
+                <input type="text" id="dob" placeholder="Select your DOB" />
+                <button id="button" onclick="getDob()">Calculate</button>
+                <h3 id="output"></h3>
+            </div>
+            <div id="decor">
+                <img src="https://imgs.search.brave.com/3nyQVK64zZd10sHd60G1F-17215gZ54y_MMWwn2kouo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/ZmxhdC1kZXNpZ24t/d29tYW4tbGlmZS1j/eWNsZS1pbGx1c3Ry/YXRpb25fMjMtMjE0/OTEyOTk3NC5qcGc_/c2VtdD1haXNfaXRl/bXNfYm9vc3RlZCZ3/PTc0MA" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
