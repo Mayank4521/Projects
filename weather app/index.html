@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <main>
+        <h1>Weather App Using JavaScript</h1>
+        <div id="container">
+            <div id="search">
+                <input id="searchin" type="text" placeholder="Enter City Name">
+                <button id="searchbtn"><i class="ri-search-line"></i></button>
+            </div>
+            <p class="error">Invalid city name</p>
+            <div id="stats">
+                <img id="weather-icon" src="https://cdn-icons-png.flaticon.com/128/4138/4138092.png" alt="">
+                <h1 id="temperature">22°C</h1>
+                <h2 id="city">Doiwala</h2>
+                   <div class="details">
+                     <div class="col">
+                        <img src="https://cdn-icons-png.flaticon.com/128/13944/13944027.png" alt="">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://cdn-icons-png.flaticon.com/128/11742/11742598.png" alt="">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind speed</p>
+                        </div>
+                    </div>
+                   </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

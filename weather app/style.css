@@ -1,0 +1,131 @@
+@font-face {
+    font-family:'montserrat';
+    src: url("./static/Montserrat-Regular.ttf");
+    font-weight: normal;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'montserrat',sans-serif;
+    background-color: rgb(47, 57, 67);
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+main h1{
+    color: white;
+    font-weight: 600;
+    font-size:x-large;
+}
+#container{
+    width: 35vw;
+    height: 80vh;
+    border-radius: 50px;
+    overflow: hidden;
+    background-image:   linear-gradient(to bottom right,#F46AD6,#3C17C3) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:50px
+}
+#search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px
+}
+#searchin{
+    padding:8px;
+    border-radius: 50px;
+    border: none;
+    font-size: medium;
+}
+#searchin:focus{
+    outline:0;
+}
+#searchbtn{
+    padding:8px;
+    border-radius: 50%;
+    border: none;
+    font-size: medium;
+    cursor:pointer;
+}
+#searchbtn:hover{
+    background-color: rgb(214, 214, 214);
+}
+#stats{
+    display: none;
+    flex-direction: column;
+    font-size: x-large;
+    justify-content:center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+#weather-icon{
+    width: 100px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    font-weight: 500;
+    gap: 60px;
+    margin-top: 35px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 35px;
+    margin-right: 10px;
+}
+.humidity, .wind{
+    font-size: large;
+    margin-top: -5px;
+}
+
+.error{
+    display: none;
+    text-align: left;
+    color:white;
+    font-weight: 700;
+    font-size: large;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+  #container {
+    width: 90vw;
+    height: auto;
+    padding: 20px 0;
+  }
+  
+  main h1 {
+    font-size: large;
+  }
+  
+  #stats {
+    font-size: large;
+  }
+  
+  .details {
+    gap: 20px;
+  }
+}
