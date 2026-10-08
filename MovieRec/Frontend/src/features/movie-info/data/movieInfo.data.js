@@ -1,0 +1,118 @@
+import { MOVIE_CATALOG } from "../../shared/movieCatalog.js"
+
+const SAMPLE_MOVIES = [
+  {
+    id: 1,
+    title: "Dune: Part Two",
+    tagline: "Long live the fighters.",
+    overview: "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. As he faces a choice between the love of his life and the fate of the universe, he strives to prevent a terrible future only he can foresee.",
+    synopsis: "Duke Paul Atreides joins Chani and the nomadic Fremen while seeking vengeance against the conspirators who devastated his dynasty. Confronted with a choice between the love of his life and the destiny of the known universe, he strives to prevent a catastrophic Holy War that only he can foresee across space and time.",
+    release_date: "2024-02-27",
+    runtime: 166,
+    vote_average: 8.6,
+    user_score: 8.6,
+    critic_score: 93,
+    certification: "PG-13",
+    genres: ["Sci-Fi", "Adventure", "Drama"],
+    poster_path: "/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    backdrop_path: "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+    director: "Denis Villeneuve",
+    writers: ["Denis Villeneuve", "Jon Spaihts"],
+    cinematography: "Greig Fraser, ASC, ACS",
+    original_score: "Hans Zimmer",
+    aspect_ratio: "1.90:1 (IMAX) / 2.39:1",
+    budget: "$190 Million",
+    box_office: "$714.4 Million",
+    audio: "Dolby Atmos / 12-Track",
+    platforms: ["Max", "Apple TV", "Prime Video"],
+    cast: [
+      { name: "Timothée Chalamet", character: "Paul Atreides", initials: "TC", portrait: "https://image.tmdb.org/t/p/w185/BE2sdjpgsa2rNTFa66f7upkaOP.jpg" },
+      { name: "Zendaya", character: "Chani", initials: "Z", portrait: "https://image.tmdb.org/t/p/w185/6TE2AlOUqcrs7CyJiWYgodmee1E.jpg" },
+      { name: "Rebecca Ferguson", character: "Lady Jessica", initials: "RF", portrait: "https://image.tmdb.org/t/p/w185/lJloTOheuQSirSLXNA3JHsrMNfH.jpg" },
+      { name: "Javier Bardem", character: "Stilgar", initials: "JB", portrait: "https://image.tmdb.org/t/p/w185/9ukJS2QWTJ22HcwR1ktMmoJ6RSL.jpg" },
+      { name: "Austin Butler", character: "Feyd-Rautha", initials: "AB", portrait: "https://image.tmdb.org/t/p/w185/7ukf3wqL9hpvQsMKj9W6Yj5EXzk.jpg" },
+    ],
+    similar: [
+      { id: 5, title: "Interstellar", year: 2014, rating: 8.7, poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg", director: "Christopher Nolan" },
+      { id: 15, title: "Blade Runner 2049", year: 2017, rating: 8.0, poster_path: "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg", director: "Denis Villeneuve" },
+      { id: 2, title: "Oppenheimer", year: 2023, rating: 8.1, poster_path: "/ptpr0kGAckfQkJeJIt8st5dglvd.jpg", director: "Christopher Nolan" },
+    ],
+    genres_and_tropes: ["Desert Sci-Fi", "Mythic Coming-of-Age", "Political Intrigue", "Cinematic Grandeur", "Sound Design Masterpiece", "Colonial Resistance", "Prophetic Visions"],
+    score_distribution: [5, 14, 28, 53],
+  },
+  {
+    id: 2,
+    title: "Oppenheimer",
+    tagline: "The world forever changes.",
+    overview: "The story of J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+    synopsis: "Physicist J. Robert Oppenheimer leads a team of scientists in the race to develop the first atomic bomb, confronting the immense consequences of the work that changes the world.",
+    release_date: "2023-07-19",
+    runtime: 181,
+    vote_average: 8.1,
+    user_score: 8.1,
+    critic_score: 93,
+    certification: "R",
+    genres: ["Drama", "History", "Thriller"],
+    poster_path: "/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
+    backdrop_path: "/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
+    director: "Christopher Nolan",
+    writers: ["Christopher Nolan"],
+    cinematography: "Hoyte van Hoytema",
+    original_score: "Ludwig Göransson",
+    aspect_ratio: "2.20:1",
+    budget: "$100 Million",
+    box_office: "$975.6 Million",
+    audio: "Dolby Atmos",
+    platforms: ["Peacock", "Prime Video"],
+  },
+  {
+    id: 5,
+    title: "Interstellar",
+    tagline: "Mankind was born on Earth. It was never meant to die here.",
+    overview: "A team of explorers travels beyond this galaxy to discover whether mankind has a future among the stars.",
+    synopsis: "With humanity facing an uncertain future on Earth, a former pilot joins a team of explorers on a journey beyond this galaxy to find a new home for humankind.",
+    release_date: "2014-11-05",
+    runtime: 169,
+    vote_average: 8.5,
+    user_score: 8.7,
+    critic_score: 73,
+    certification: "PG-13",
+    genres: ["Adventure", "Drama", "Sci-Fi"],
+    poster_path: "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    backdrop_path: "/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+    director: "Christopher Nolan",
+    writers: ["Jonathan Nolan", "Christopher Nolan"],
+    cinematography: "Hoyte van Hoytema",
+    original_score: "Hans Zimmer",
+    aspect_ratio: "2.39:1",
+    budget: "$165 Million",
+    box_office: "$681 Million",
+    audio: "Dolby Digital / 5.1",
+    platforms: ["Paramount+", "Prime Video"],
+  },
+]
+
+export const getMovieInfo = (movie, routeId) => {
+  const fixture = SAMPLE_MOVIES.find((sample) => String(sample.id) === String(routeId))
+    || SAMPLE_MOVIES.find((sample) => sample.title.toLowerCase() === String(movie?.title || movie?.name || "").toLowerCase())
+  const catalogMovie = MOVIE_CATALOG
+    .find((sample) => String(sample.id) === String(routeId))
+  const source = movie || catalogMovie || fixture
+
+  if (!source && !fixture) return null
+
+  return {
+    ...(fixture || {}),
+    ...(catalogMovie || {}),
+    ...(source || {}),
+    title: source?.title || source?.name || fixture?.title || "Movie",
+    overview: source?.overview || fixture?.overview || "Explore the story, cast, and details behind this film.",
+    release_date: source?.release_date || source?.first_air_date || fixture?.release_date || (source?.year ? `${source.year}-01-01` : ""),
+    runtime: source?.runtime || fixture?.runtime || 0,
+    vote_average: source?.vote_average ?? source?.rating ?? fixture?.vote_average ?? 0,
+    genres: source?.genres || fixture?.genres || (source?.genre ? source.genre.split(/[\/,·]/).map((genre) => genre.trim()) : []),
+    poster_path: source?.poster_path || fixture?.poster_path || source?.poster,
+    backdrop_path: source?.backdrop_path || fixture?.backdrop_path || source?.poster_path || source?.poster,
+    platforms: source?.platforms || fixture?.platforms || (source?.platform ? [source.platform] : undefined),
+  }
+}
